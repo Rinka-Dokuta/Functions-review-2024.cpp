@@ -1,0 +1,51 @@
+#include<iostream>
+using namespace std;
+
+
+
+double calculatearea(double length, double width) {
+	return width * length;
+}
+
+bool isPrime(int n);
+	
+
+
+int main() {
+	double width;
+	double length;
+
+	cout << "What is the width?";
+	cin >> width;
+
+	cout << "what is the length?";
+	cin >> length;
+
+	double area = calculatearea(width, length);
+	cout << "The area is:" << area << endl;
+
+	
+
+	cout << isPrime(1);
+	
+}
+
+
+bool isPrime(int n) {
+	int num = n - 1;
+	while (num > 1) {
+		if (n % num == 0) {
+			cout << num << "   dividen evenly!" << endl;
+			return false;
+		}
+
+
+		else {
+			//cout << "didn't divide evenly << endl;
+		}
+		num--;
+	}
+	return true;
+}
+
+	
